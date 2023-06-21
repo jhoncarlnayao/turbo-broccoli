@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+
+
+
+  <style>
+    @media (max-width: 480px) {
+      /* Add your styles here */
+
+    }
+
+    @media (max-width: 768px) {
+     
+    }
+
+    @media (min-width: 1200px) {
+      /* Styles for screens with width 1200px and above */
+    }
+
+    @media (max-width: 1199px) and (min-width: 1024px) {
+      /* Styles for screens with width between 1024px and 1199px */
+    }
+
+    @media (max-width: 1023px) and (min-width: 768px) {
+      /* Styles for screens with width between 768px and 1023px */
+    }
+
+    @media (max-width: 767px) {
+    }
+
+    @media (max-width: 800px) and (min-width: 1280px) {
+    }
+
+    @media (max-width: 1280px) and (min-width: 800px) {
+      /* Styles specifically for MacBook with a screen size of 13.3 inches */
+      
+    }
+
+    .custom-font {
+      font-family: 'Alfa Slab One', sans-serif;
+    }
+
+    body {
+     zoom: 68%;
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      transform-origin: 0 0;
+     
+      background-image: url(Coffee\ \(Desktop\).JPG);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      height: 400vh;
+      scroll-behavior: smooth;
+
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /*NAVIGATION BAR */
+    .Navigation {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    ul.Navigation {
+      position: sticky;
+      height: 65px;
+      width: 1500px;
+      margin: 0;
+      padding: 10;
+      overflow: hidden;
+      background-color: #deb887;
+
+
+    }
+
+    ul.Navigation li {
+      position: relative;
+      top: -100px;
+      display: inline-block;
+      left: 800px;
+      margin-left: 6px;
+      width: 90px;
+      height: 60px;
+      padding-top: 25px;
+      list-style: none;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: arial bold;
+    }
+
+    ul.Navigation li a {
+      display: block;
+      padding: 25px;
+      text-decoration: none;
+      color: black;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    ul.Navigation li a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: White;
+      /* Change the color as desired */
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    ul.Navigation li a:hover {
+      transform: translateY(-5px);
+    }
+
+    ul.Navigation li a:hover::after {
+      transform: scaleX(1);
+    }
+
+    Navigation {
+      font-family: arial bold;
+      font-size: 25px;
+      display: block;
+      text-decoration: none;
+      background-color: white;
+
+      color: white;
+    }
+
+    ul {
+      font-family: arial bold;
+      color: black;
+      position: relative;
+    }
+
+    /* END OF NAVIGATION BAR */
+
+
+    /* BUTTON */
+    button {
+      position: relative;
+      top: 17pc;
+      left: 3.8pc;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: inherit;
+      font-family: inherit;
+    }
+
+    button.learn-more {
+      width: 12rem;
+      height: auto;
+    }
+
+    button.learn-more .circle {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 3rem;
+      height: 3rem;
+      background: #deb887;
+      border-radius: 1.625rem;
+    }
+
+    button.learn-more .circle .icon {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: #fff;
+    }
+
+    button.learn-more .circle .icon.arrow {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      left: 0.625rem;
+      width: 1.125rem;
+      height: 0.125rem;
+      background: none;
+    }
+
+    button.learn-more .circle .icon.arrow::before {
+      position: absolute;
+      content: "";
+      top: -0.29rem;
+      right: 0.0625rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-top: 0.125rem solid #fff;
+      border-right: 0.125rem solid #fff;
+      transform: rotate(45deg);
+    }
+
+    button.learn-more .button-text {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin: 0 0 0 1.85rem;
+      color: whitesmoke;
+      font-weight: 700;
+      line-height: 1.6;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    button:hover .circle {
+      width: 100%;
+    }
+
+    button:hover .circle .icon.arrow {
+      background: #fff;
+      transform: translate(1rem, 0);
+    }
+
+    button:hover .button-text {
+      color: #fff;
+    }
+
+    /* BUTTON */
+
+
+    /* WORD AND SUCH */
+    h2 {
+      position: relative;
+      top: 300px;
+      left: 72px;
+      font-family: Arial bold;
+      font-size: 40px;
+      color: yellow;
+
+    }
+
+    p {
+      position: relative;
+      top: 290px;
+      left: 71px;
+      font-family: arial bold;
+      color: white;
+      font-size: 21px;
+
+    }
+
+    /* CONTAINER ADJUST BOTH MENU*/
+    .card-container {
+      position: absolute;
+      top: 53pc;
+      left: 10pc;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* 4 columns */
+      grid-template-rows: repeat(2, 1fr);
+      /* 2 rows */
+      grid-gap: 100px;
+      /* Adjust the gap between cards as needed */
+      max-width: 1000px;
+      margin: 6pc auto;
+      /* Adjust the margin value as needed */
+    }
+
+    .card-container2 {
+      position: absolute;
+      top: 80pc;
+      left: 10pc;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* 4 columns */
+      grid-template-rows: repeat(2, 1fr);
+      /* 2 rows */
+      grid-gap: 100px;
+      /* Adjust the gap between cards as needed */
+      max-width: 1000px;
+      margin: 6pc auto;
+      /* Adjust the margin value as needed */
+    }
+
+
+
+
+
+
+    /* CONTAINER ADJUST BOTH MENU*/
+
+    /* ORDER MENU  */
+    .card {
+
+      width: 240px;
+      height: 254px;
+      border-radius: 20px;
+      background: url(c1.jpg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 1.8rem;
+      border: 4px solid #c3c6ce;
+      transition: 0.5s ease-out;
+      overflow: visible;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .card-details {
+      color: transparent;
+      /* Hide the text by default */
+      height: 100%;
+      gap: .5em;
+      display: grid;
+      place-content: center;
+      transition: color 0.3s ease-out;
+      /* Add transition for smooth effect */
+    }
+
+    .card:hover .card-details {
+      color: black;
+      /* Change the text color on hover */
+    }
+
+    .card .text-body {
+      opacity: 0;
+      /* Hide the text by default */
+      transition: opacity 0.3s ease-out;
+      /* Add transition for smooth effect */
+    }
+
+    .card:hover .text-body {
+      opacity: 1;
+      /* Show the text on hover */
+    }
+
+
+    .card-button {
+      transform: translate(-50%, 125%);
+      width: 48%;
+      height: 10%;
+      border-radius: 1rem;
+      border: none;
+      background-color: #deb887;
+      color: black;
+      font-size: 80%;
+      padding: .5rem 1rem;
+      position: absolute;
+      left: 50%;
+      top: 91%;
+      bottom: 0;
+      opacity: 0;
+      transition: 0.3s ease-out;
+      font-family: bold;
+      border: 2px solid whitesmoke;
+    }
+
+    .text-body {
+      color: rgb(134, 134, 134);
+      font-size: x-large;
+      font-family: bold;
+    }
+
+    /*Text*/
+    .text-title {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    /*Hover*/
+    .card:hover {
+      border-color: whitesmoke;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+      transform: scale(1.1);
+    }
+
+    .card:hover .card-button {
+      transform: translate(-50%, 50%);
+      opacity: 1;
+    }
+
+    @keyframes zoom-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.8)
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .card.zoom-in {
+      animation: zoom-in 1.5s ease-in-out;
+    }
+
+
+
+    /* ORDER MENU */
+
+
+  .title{
+    font-size: 65px;
+    font-family: sans;
+    color: yellow;
+    font-weight: bold;
+    position: relative;
+    top: -10%;
+    left: 67px;
+  }
+
+    h3 {
+      color: black;
+      font-size: xx-large;
+      position: absolute;
+      top: 80pc;
+      left: 40pc;
+    }
+
+    h6 {
+      position: absolute;
+      top: 44pc;
+      left: 300px;
+      color: yellow;
+      font-size: 2.8pc;
+      font-family: Arial bold;
+
+    }
+
+    h4 {
+      font-size: 1%;
+      position: absolute;
+      top: 1px;
+
+    }
+
+    /*ORDER MENU 2*/
+    .card2 {
+
+      width: 240px;
+      height: 254px;
+      border-radius: 20px;
+      background-image: url(c2.jpg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 1.8rem;
+      border: 4px solid #c3c6ce;
+      transition: 0.5s ease-out;
+      overflow: visible;
+      transition: transform 0.4s ease-in-out;
+    }
+
+
+
+    .card-details2 {
+      color: transparent;
+      /* Hide the text by default */
+      height: 100%;
+      gap: .5em;
+      display: grid;
+      place-content: center;
+      transition: color 0.3s ease-out;
+      /* Add transition for smooth effect */
+    }
+
+    .card2:hover .card-details2 {
+      color: black;
+      /* Change the text color on hover */
+    }
+
+    .card2 .text-body2 {
+      opacity: 0;
+      /* Hide the text by default */
+      transition: opacity 0.3s ease-out;
+      /* Add transition for smooth effect */
+    }
+
+    .card2:hover .text-body2 {
+      opacity: 1;
+      /* Show the text on hover */
+    }
+
+
+    .card-button2 {
+      transform: translate(-50%, 125%);
+      width: 48%;
+      height: 10%;
+      border-radius: 1rem;
+      border: none;
+      background-color: #deb887;
+      color: black;
+      font-size: 80%;
+      padding: .5rem 1rem;
+      position: absolute;
+      left: 50%;
+      top: 91%;
+      bottom: 0;
+      opacity: 0;
+      transition: 0.3s ease-out;
+      font-family: bold;
+      border: 2px solid whitesmoke;
+    }
+
+    .text-body2 {
+      color: rgb(134, 134, 134);
+      font-size: x-large;
+      font-family: bold;
+    }
+
+    /*Text*/
+    .text-title2 {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    /*Hover*/
+    .card2:hover {
+      border-color: whitesmoke;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+      transform: scale(1.1);
+    }
+
+    .card2:hover .card-button2 {
+      transform: translate(-50%, 50%);
+      opacity: 1;
+    }
+
+    @keyframes zoom-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.8)
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .card2.zoom-in {
+      animation: zoom-in 1.5s ease-in-out;
+    }
+
+    /* ORDER MENU 2*/
+
+
+    /* ORDER MENU 3 */
+    .card3 {
+
+      width: 250px;
+      height: 254px;
+      border-radius: 20px;
+      background: url(c3.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      padding: 1.8rem;
+      border: 4px solid #c3c6ce;
+      transition: 0.5s ease-out;
+      overflow: visible;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .card-details3 {
+      color: transparent;
+      /* Hide the text by default */
+      height: 100%;
+      gap: .5em;
+      display: grid;
+      place-content: center;
+      transition: color 0.3s ease-out;
+      /* Add transition for smooth effect */
+    }
+
+    .card3:hover .card-details3 {
+      color: black;
+      /* Change the text color on hover */
+    }
+
+    .card3 .text-body3 {
+      opacity: 0;
+      /* Hide the text by default */
+      transition: opacity 0.3s ease-out;
+      /* Add transition for smooth effect */
+    }
+
+    .card3:hover .text-body3 {
+      opacity: 1;
+      /* Show the text on hover */
+    }
+
+
+    .card-button3 {
+      transform: translate(-50%, 125%);
+      width: 48%;
+      height: 10%;
+      border-radius: 1rem;
+      border: none;
+      background-color: #deb887;
+      color: black;
+      font-size: 80%;
+      padding: .5rem 1rem;
+      position: absolute;
+      left: 50%;
+      top: 91%;
+      bottom: 0;
+      opacity: 0;
+      transition: 0.3s ease-out;
+      font-family: bold;
+      border: 2px solid whitesmoke;
+    }
+
+    .text-body3 {
+      color: rgb(134, 134, 134);
+      font-size: x-large;
+      font-family: bold;
+    }
+
+    /*Text*/
+    .text-title3 {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    /*Hover*/
+    .card3:hover {
+      border-color: whitesmoke;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+      transform: scale(1.1);
+    }
+
+    .card3:hover .card-button3 {
+      transform: translate(-50%, 50%);
+      opacity: 1;
+    }
+
+    @keyframes zoom-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.8)
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .card3.zoom-in {
+      animation: zoom-in 1.5s ease-in-out;
+    }
+
+    /* ORDER MENU 3*/
+
+
+    /* ORDER MENU 4 */
+    .card4 {
+
+      width: 250px;
+      height: 254px;
+      border-radius: 20px;
+      background: url(c4.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      padding: 1.8rem;
+      border: 4px solid #c3c6ce;
+      transition: 0.5s ease-out;
+      overflow: visible;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .card-details4 {
+      color: transparent;
+      /* Hide the text by default */
+      height: 100%;
+      gap: .5em;
+      display: grid;
+      place-content: center;
+      transition: color 0.3s ease-out;
+      /* Add transition for smooth effect */
+    }
+
+    .card4:hover .card-details4 {
+      color: black;
+      /* Change the text color on hover */
+    }
+
+    .card4 .text-body4 {
+      opacity: 0;
+      /* Hide the text by default */
+      transition: opacity 0.3s ease-out;
+      /* Add transition for smooth effect */
+    }
+
+    .card4:hover .text-body4 {
+      opacity: 1;
+      /* Show the text on hover */
+    }
+
+
+    .card-button4 {
+      transform: translate(-50%, 125%);
+      width: 48%;
+      height: 10%;
+      border-radius: 1rem;
+      border: none;
+      background-color: #deb887;
+      color: black;
+      font-size: 80%;
+      padding: .5rem 1rem;
+      position: absolute;
+      left: 50%;
+      top: 91%;
+      bottom: 0;
+      opacity: 0;
+      transition: 0.3s ease-out;
+      font-family: bold;
+      border: 2px solid whitesmoke;
+    }
+
+    .text-body4 {
+      color: rgb(134, 134, 134);
+      font-size: x-large;
+      font-family: bold;
+    }
+
+    /*Text*/
+    .text-title4 {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    /*Hover*/
+    .card4:hover {
+      border-color: whitesmoke;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+      transform: scale(1.1);
+    }
+
+    .card4:hover .card-button4 {
+      transform: translate(-50%, 50%);
+      opacity: 1;
+    }
+
+    @keyframes zoom-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.8)
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .card4.zoom-in {
+      animation: zoom-in 1.5s ease-in-out;
+    }
+
+    /* ORDER MENU 4*/
+
+    /* ORDER MENU 5 */
+    .card5 {
+
+      width: 240px;
+      height: 254px;
+      border-radius: 20px;
+      background: url(c5.jpg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 1.8rem;
+      border: 4px solid #c3c6ce;
+      transition: 0.5s ease-out;
+      overflow: visible;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .card-details5 {
+      color: transparent;
+      /* Hide the text by default */
+      height: 100%;
+      gap: .5em;
+      display: grid;
+      place-content: center;
+      transition: color 0.3s ease-out;
+      /* Add transition for smooth effect */
+    }
+
+    .card5:hover .card-details5 {
+      color: black;
+      /* Change the text color on hover */
+    }
+
+    .card5 .text-body5 {
+      opacity: 0;
+      /* Hide the text by default */
+      transition: opacity 0.3s ease-out;
+      /* Add transition for smooth effect */
+    }
+
+    .card5:hover .text-body5 {
+      opacity: 1;
+      /* Show the text on hover */
+    }
+
+
+    .card-button5 {
+      transform: translate(-50%, 125%);
+      width: 48%;
+      height: 10%;
+      border-radius: 1rem;
+      border: none;
+      background-color: #deb887;
+      color: black;
+      font-size: 80%;
+      padding: .5rem 1rem;
+      position: absolute;
+      left: 50%;
+      top: 91%;
+      bottom: 0;
+      opacity: 0;
+      transition: 0.3s ease-out;
+      font-family: bold;
+      border: 2px solid whitesmoke;
+    }
+
+    .text-body5 {
+      color: rgb(134, 134, 134);
+      font-size: x-large;
+      font-family: bold;
+    }
+
+    /*Text*/
+    .text-title5 {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    /*Hover*/
+    .card5:hover {
+      border-color: whitesmoke;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+      transform: scale(1.1);
+    }
+
+    .card5:hover .card-button5 {
+      transform: translate(-50%, 50%);
+      opacity: 1;
+    }
+
+    @keyframes zoom-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.8)
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .card5.zoom-in {
+      animation: zoom-in 1.5s ease-in-out;
+    }
+
+    /* ORDER MENU 5*/
+
+    /* ORDER MENU 6 */
+
+    .card6 {
+      width: 240px;
+      height: 254px;
+      border-radius: 20px;
+      background: url(c6.jpg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 1.8rem;
+      border: 4px solid #c3c6ce;
+      transition: 0.5s ease-out;
+      overflow: visible;
+    }
+
+    .card-details6 {
+      color: transparent;
+      height: 100%;
+      gap: .5em;
+      display: grid;
+      place-content: center;
+      transition: color 0.3s ease-out;
+    }
+
+    .card6:hover .card-details6 {
+      color: black;
+    }
+
+    .card6 .text-body6 {
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
+
+    .card6:hover .text-body6 {
+      opacity: 1;
+    }
+
+    .card-button6 {
+      transform: translate(-50%, 125%);
+      width: 48%;
+      height: 10%;
+      border-radius: 1rem;
+      border: none;
+      background-color: #deb887;
+      color: black;
+      font-size: 80%;
+      padding: .5rem 1rem;
+      position: absolute;
+      left: 50%;
+      top: 91%;
+      bottom: 0;
+      opacity: 0;
+      transition: 0.3s ease-out;
+      font-family: bold;
+      border: 2px solid whitesmoke;
+    }
+
+    .text-body6 {
+      color: rgb(134, 134, 134);
+      font-size: x-large;
+      font-family: bold;
+    }
+
+    .text-title6 {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .card6:hover {
+      border-color: whitesmoke;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+      transform: scale(1.1);
+    }
+
+    .card6:hover .card-button6 {
+      transform: translate(-50%, 50%);
+      opacity: 1;
+    }
+
+    @keyframes zoom-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.8)
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .card6.zoom-in {
+      animation: zoom-in 1.5s ease-in-out;
+    }
+
+    /* ORDER MENU 6*/
+ 
+
+
+
+    /* PASTRIES MENU */
+
+
+
+
+
+    /* ORDER MENU 7*/
+
+ 
+ 
+ /* HOME IMAGE */
+ .card15 {
+      width: 450px;
+      height: 530px;
+      border-radius: 80px;
+      background: url(logo.jpg);
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top:6pc;
+      left:59pc;
+      padding: 1.8rem;
+      border: 4px solid #c3c6ce;
+     transition: 0.3s ease-out;
+      overflow: visible;
+    }
+ 
+     .card15:hover {
+      border-color: whitesmoke;
+      background: url(logo2.jpg);
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+     animation: 1.5s ease-in-out;
+     }
+ /* HOME IMAGE */
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <ul class="Navigation">
+    <h1>COFFEE SHOP</h1>
+    <li><a href="#Home"><b>Home</b></a></li>
+    <li><a href="#Menu"><b>Menu</b></a></li>
+    <li><a href="#CONTACT"><b>Contact</b></a></li>
+    <li><a href="#ORDER"><b>Order</b></a></li>
+  </ul>
+
+  <div class="card15"></div>
+
+  <h2><b>It's Not Just Coffee, It's Experience.</b></h2>
+  <p>Discover Lot 38 Kape. Bukid. Frappe, a vibrant city coffeehouse,<br> where passionate baristas meticulously craft the perfect
+    cup of<br>
+    coffee to awaken your senses, while our inviting atmosphere and exceptional service<br> create a space for you to
+    savor the
+    flavors and forge meaningful connections.</p>
+
+
+
+  <button class="learn-more">
+    <span class="circle" aria-hidden="true">
+      <span class="icon arrow"></span>
+    </span>
+    <span class="button-text">Learn More</span>
+  </button>
+
+
+
+
+
+
+  <div class="card-container">
+
+    <div class="card">
+      <div class="card-details">
+        <p1 class="text-title"><b>COFFEE</b></p1>
+        <p2 class="text-body">ESPRESSO SHOT AND YOGURT</p2>
+        <img1 src="coffe1.jpg" alt="card-details">
+
+      </div>
+      <button class="card-button"><b>ADD TO CART</b></button>
+    </div>
+
+
+
+    <div class="card2">
+      <div class="card-details2">
+        <p3 class="text-title2"><b>TEA</b></p3>
+        <p4 class="text-body2">GREEN TEA WITH LEMON</p4>
+      </div>
+      <button class="card-button2"><b>ADD TO CART</b></button>
+    </div>
+
+    <div class="card3">
+      <div class="card-details3">
+        <p3 class="text-title3"><b>TEA</b></p3>
+        <p4 class="text-body3">GREEN TEA WITH LEMON</p4>
+      </div>
+      <button class="card-button3"><b>ADD TO CART</b></button>
+    </div>
+  </div>
+
+
+
+
+  </div>
+
+
+  <div class="card-container2">
+
+    <div class="card4">
+      <div class="card-details4">
+        <p5 class="text-title4"><b>TEA</b></p5>
+        <p6 class="text-body4">GREEN TEA WITH LEMON</p6>
+      </div>
+      <button class="card-button4"><b>ADD TO CART</b></button>
+    </div>
+
+
+
+
+
+    <div class="card5">
+      <div class="card-details5">
+        <p7 class="text-title5"><b>TEA</b></p7>
+        <p8 class="text-body5">GREEN TEA WITH LEMON</p8>
+      </div>
+      <button class="card-button5"><b>ADD TO CART</b></button>
+    </div>
+
+
+
+
+    <div class="card6">
+      <div class="card-details6">
+        <p7 class="text-title6"><b>TEA</b></p7>
+        <p8 class="text-body6">GREEN TEA WITH LEMON</p8>
+      </div>
+      <button class="card-button6"><b>ADD TO CART</b></button>
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="title">
+<p2>Lot 38 Kape. <br>Bukid. <br>Frappe</p2>
+
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+
+  <h6 id="Menu"> HERE ARE SOME OF OUR MENU</h6>
+
+  <h4 id="Home"> HOME</h4>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        $(".card").each(function () {
+          var elementPos = $(this).offset().top;
+          var topOfWindow = $(window).scrollTop();
+          var windowHeight = $(window).height();
+
+          if (elementPos < topOfWindow + windowHeight) {
+            $(this).addClass("zoom-in");
+          }
+        });
+      });
+    });
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        $(".card2").each(function () {
+          var elementPos = $(this).offset().top;
+          var topOfWindow = $(window).scrollTop();
+          var windowHeight = $(window).height();
+
+          if (elementPos < topOfWindow + windowHeight) {
+            $(this).addClass("zoom-in");
+          }
+        });
+      });
+    });
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        $(".card3").each(function () {
+          var elementPos = $(this).offset().top;
+          var topOfWindow = $(window).scrollTop();
+          var windowHeight = $(window).height();
+
+          if (elementPos < topOfWindow + windowHeight) {
+            $(this).addClass("zoom-in");
+          }
+        });
+      });
+    });
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        $(".card4").each(function () {
+          var elementPos = $(this).offset().top;
+          var topOfWindow = $(window).scrollTop();
+          var windowHeight = $(window).height();
+
+          if (elementPos < topOfWindow + windowHeight) {
+            $(this).addClass("zoom-in");
+          }
+        });
+      });
+    });
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        $(".card5").each(function () {
+          var elementPos = $(this).offset().top;
+          var topOfWindow = $(window).scrollTop();
+          var windowHeight = $(window).height();
+
+          if (elementPos < topOfWindow + windowHeight) {
+            $(this).addClass("zoom-in");
+          }
+        });
+      });
+    });
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        $(".card6").each(function () {
+          var elementPos = $(this).offset().top;
+          var topOfWindow = $(window).scrollTop();
+          var windowHeight = $(window).height();
+
+          if (elementPos < topOfWindow + windowHeight) {
+            $(this).addClass("zoom-in");
+          }
+        });
+      });
+    });
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        $(".card6").each(function () {
+          var elementPos = $(this).offset().top;
+          var topOfWindow = $(window).scrollTop();
+          var windowHeight = $(window).height();
+
+          if (elementPos < topOfWindow + windowHeight) {
+            $(this).addClass("zoom-in");
+          }
+        });
+      });
+    });
+
+
+
+/* ADJUST SCREEN*/
+  
+
+  </script>
+
+
+
+
+
+
+
+</html>
